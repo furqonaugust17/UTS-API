@@ -6,7 +6,7 @@
 
 ---
 
-# 🎬 MovieDB Web App
+# 🎬 Movie Web App
 
 Aplikasi web ini dibangun menggunakan Laravel serta menampilkan data film dari TMDB API.
 
@@ -67,7 +67,7 @@ cp .env.example .env
 Lalu buka file `.env` dan ubah bagian berikut sesuai kebutuhan:
 
 ```env
-TMDB_KEY=masukkan_api_key_tmdb_anda_disini
+TMDB_KEY=masukkan_api_key_tmdb_disini
 ```
 
 ### 5. **Generate App Key**
@@ -78,7 +78,7 @@ php artisan key:generate
 
 ### 6. **(Opsional) Jalankan Migrasi & Seeder**
 
-> Jika aplikasi ini menggunakan database, kamu bisa jalankan:
+> Jika aplikasi ini menggunakan database, jalankan:
 
 ```bash
 php artisan migrate --seed
@@ -138,5 +138,5 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ## 📬 Contact
 
-Feel free to reach out via [[furqonaugust@furqonaugust.web.id](mailto\:furqonaugust@furqonaugust.web.id)] or [@yourgithub](https://github.com/furqonaugust17) if you have any questions or suggestions!
+Feel free to reach out via [[furqonaugust@furqonaugust.web.id](mailto\:furqonaugust@furqonaugust.web.id)] or [@furqonaugust17](https://github.com/furqonaugust17) if you have any questions or suggestions!
 
