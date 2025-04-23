@@ -1,66 +1,142 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📝 UTS Konstruksi dan Evolusi Perangkat Lunak
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+- **Nama** : Furqon August Seventeenth
+- **NIM**  : 2311082018
+- **Kelas**: TRPL 2D
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# 🎬 MovieDB Web App
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Aplikasi web ini dibangun menggunakan Laravel serta menampilkan data film dari TMDB API.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🚀 Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Menampilkan data film dari TMDB API
+- Menampilkan film yang sedang tayang, dan yang akan datang
+- Halaman detail film 
+- Tampilan responsif menggunakan Bootstrap 5
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠️ Tech Stack
 
-## Laravel Sponsors
+- **Backend:** Laravel 11
+- **Frontend:** Bootstrap 5, Blade Templating
+- **API:** TMDB (The Movie Database)
+- **Other Dependencies:**
+  - `guzzlehttp/guzzle` – HTTP client for TMDB API
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## ⚙️ Langkah-Langkah Instalasi
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Ikuti panduan berikut untuk menjalankan project Laravel MovieDB di lokal:
 
-## Contributing
+### 1. **Clone Repository**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+git clone https://github.com/furqonaugust17/UTS-API.git
+cd UTS-API
+```
 
-## Code of Conduct
+### 2. **Install Dependency Laravel**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+composer install
+```
 
-## Security Vulnerabilities
+### 3. **Install Dependency Frontend**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+npm install
+npm run dev
+```
 
-## License
+> Jika ingin production:\
+> Gunakan `npm run build` untuk compile asset production.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 4. **Copy dan Atur File .env**
+
+```bash
+cp .env.example .env
+```
+
+Lalu buka file `.env` dan ubah bagian berikut sesuai kebutuhan:
+
+```env
+TMDB_KEY=masukkan_api_key_tmdb_anda_disini
+```
+
+### 5. **Generate App Key**
+
+```bash
+php artisan key:generate
+```
+
+### 6. **(Opsional) Jalankan Migrasi & Seeder**
+
+> Jika aplikasi ini menggunakan database, kamu bisa jalankan:
+
+```bash
+php artisan migrate --seed
+```
+
+### 7. **Jalankan Server**
+
+```bash
+php artisan serve
+```
+
+Buka di browser:
+
+```
+http://localhost:8000
+```
+
+---
+
+## 📁 Project Structure
+
+```
+├── app
+│   └── Http
+│       ├── Controllers
+│       │   └── MovieController.php
+|       └── Services
+│           └── MovieService.php
+├── resources
+│   └── views
+│       ├── components
+│       |   ├── layout.blade.php
+│       |   ├── nav-link.blade.php
+│       |   └── navbar.blade.php
+│       └── movies
+│           ├── main.blade.php
+│           └── detail.blade.php
+├── routes
+│   └── web.php
+```
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙌 Acknowledgements
+
+- [TMDB API](https://www.themoviedb.org/documentation/api)
+- [Laravel](https://laravel.com)
+- [Bootstrap](https://getbootstrap.com)
+
+---
+
+## 📬 Contact
+
+Feel free to reach out via [[furqonaugust@furqonaugust.web.id](mailto\:furqonaugust@furqonaugust.web.id)] or [@yourgithub](https://github.com/furqonaugust17) if you have any questions or suggestions!
+
