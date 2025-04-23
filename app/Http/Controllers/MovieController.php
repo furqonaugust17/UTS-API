@@ -29,4 +29,11 @@ class MovieController extends Controller
         $videos = $this->movieService->getVideos($id);
         return view('movies.detail', compact('movie', 'similars', 'videos'));
     }
+
+    public function search()
+    {
+        $movies = $this->movieService->searchMovies(request(['query', 'page']));
+        // dd($movies);
+        return view('movies.search', compact('movies'));
+    }
 }

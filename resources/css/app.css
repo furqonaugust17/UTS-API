@@ -15,7 +15,21 @@
     object-position: top;
 }
 
+.search-image {
+    height: 10rem;
+    object-fit: contain;
+    object-position: top;
+}
+
 .backdrop {
     opacity: 30%;
     filter: blur(1px) brightness(40%);
+}
+
+.text-truncate-overview {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }

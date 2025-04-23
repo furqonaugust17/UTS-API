@@ -10,5 +10,9 @@
                 <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
             </div>
         </div>
+        <form class="d-flex" role="search" action="{{ route('search') }}">
+            <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
     </div>
 </nav>
