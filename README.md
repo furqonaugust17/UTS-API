@@ -15,7 +15,7 @@ Aplikasi web ini dibangun menggunakan Laravel serta menampilkan data film dari T
 ## 🚀 Features
 
 - Menampilkan data film dari TMDB API
-- Menampilkan film yang sedang tayang, dan yang akan datang
+- Menampilkan film yang sedang tayang, yang akan datang dan pencarian
 - Halaman detail film 
 - Tampilan responsif menggunakan Bootstrap 5
 
@@ -114,8 +114,9 @@ http://localhost:8000
 │       |   ├── nav-link.blade.php
 │       |   └── navbar.blade.php
 │       └── movies
+│           ├── detail.blade.php
 │           ├── main.blade.php
-│           └── detail.blade.php
+│           └── search.blade.php
 ├── routes
 │   └── web.php
 ```
